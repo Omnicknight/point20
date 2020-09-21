@@ -1,0 +1,44 @@
+.unit {
+    display: inline-flex;
+    background-color: yellow;
+    margin: 50px;
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 50px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.health {
+    width: 90%;
+    height: 10px;
+    background-color:red;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.stamina {
+    width: 180px;
+    height: 10px;
+    background-color:blue;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.pic {
+    width: 70%;
+    height: auto;
+}
+
+.img {
+    display: flex;
+    background-color: #D2E1F3FF;
+    padding: 20px;
+    width: 60%;
+    height: 40%;
+    justify-content: center;
+}
