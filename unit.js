@@ -37,14 +37,23 @@ class Unit {
         divHealth.addEventListener('click', (e) => {      
                 divHealth.style.width = `${this.health = this.health - 5}%`;
                 if(this.health < 5) {
-                // divHealth.style.width = `${this.health = 100}%`;
-                // divHealth.style.backgroundColor = 'grey';
-                // e.stopImmediatePropagation();
-                div.remove();
+                divHealth.style.width = `${this.health = 100}%`;
+                divHealth.style.backgroundColor = 'grey';
+                divHealth.style.pointerEvents = 'none';
             };
 
         });
         div.appendChild(divStamina);
+
+        divStamina.addEventListener('click', (e) => {      
+            divStamina.style.width = `${this.distance = this.distance - 5}%`;
+            if(this.distance < 5) {
+            divStamina.style.width = `${this.health = 100}%`;
+            divStamina.style.backgroundColor = 'grey';
+            divStamina.style.pointerEvents = 'none';
+        };
+
+    });
         div.appendChild(p);
         p.innerHTML = `${this.type}`;
         div.appendChild(divImg);
