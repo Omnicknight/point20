@@ -34,8 +34,15 @@ class Unit {
         div.appendChild(divHealth);
         // this.registerListeners();
 
-        divHealth.addEventListener('click', () => {
-            divHealth.style.width = `${this.health - 5}%`;
+        divHealth.addEventListener('click', (e) => {      
+                divHealth.style.width = `${this.health = this.health - 5}%`;
+                if(this.health < 5) {
+                // divHealth.style.width = `${this.health = 100}%`;
+                // divHealth.style.backgroundColor = 'grey';
+                // e.stopImmediatePropagation();
+                div.remove();
+            };
+
         });
         div.appendChild(divStamina);
         div.appendChild(p);
