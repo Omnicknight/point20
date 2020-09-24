@@ -4,7 +4,6 @@ class Unit {
         this.health = this.maxHealth = health;
         this.distance = this.maxDistance = distance;
         this.el;
-        // this.registerListeners();
 
     }
     
@@ -32,14 +31,12 @@ class Unit {
 
         document.body.append(div);
         div.appendChild(divHealth);
-        // this.registerListeners();
 
         divHealth.addEventListener('click', (e) => {      
                 divHealth.style.width = `${this.health = this.health - 5}%`;
                 if(this.health < 5) {
-                divHealth.style.width = '100%';
-                divHealth.style.backgroundColor = 'grey';
-                divHealth.style.pointerEvents = 'none';
+                div.style.backgroundColor = 'grey';
+                div.style.pointerEvents = 'none';
             };
 
         });
@@ -60,13 +57,6 @@ class Unit {
         divImg.appendChild(img);
 
     }
-
-    // registerListeners() {
-    //     divHealth = document.getElementsByClassName('health');
-    //     divHealth.addEventListener('click', () => {
-    //         divHealth.style.width = `${this.health - 5}%`;
-    //     });
-    // }
 
     isReadyToMove() {
         return this.distance > 0;
